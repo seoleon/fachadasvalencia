@@ -3,201 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informe Técnico: Patologías en Fachadas y Soluciones de Rehabilitación</title>
+    <title>Fachadas que Hablan: Guía de Mantenimiento y Estilo</title>
     <style>
-        :root {
-            --primary: #0056b3; /* Azul técnico */
-            --secondary: #6c757d; /* Gris acero */
-            --accent: #ffc107; /* Amarillo seguridad */
-            --bg-light: #f8f9fa;
-            --text-dark: #212529;
-        }
-        
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400&family=Open+Sans:wght@400;600;800&display=swap');
+
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height: 1.9;
-            color: var(--text-dark);
-            max-width: 950px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            color: #444;
+            line-height: 1.8;
+            margin: 0;
+            background-color: #fdfdfd;
         }
 
-        header {
-            background: linear-gradient(135deg, var(--primary), #004494);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 0 0 15px 15px;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .blog-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border-radius: 8px;
         }
 
         h1 {
-            font-size: 2.8em;
-            margin: 0;
-            font-weight: 700;
-            letter-spacing: -1px;
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            display: block;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
         }
 
         h2 {
-            color: var(--primary);
-            font-size: 2em;
+            font-family: 'Merriweather', serif;
+            color: #2c7a7b; /* Verde azulado elegante */
             margin-top: 50px;
-            border-bottom: 2px solid var(--bg-light);
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            color: var(--secondary);
-            font-size: 1.5em;
-            margin-top: 35px;
-            font-weight: 600;
+            font-size: 1.8rem;
         }
 
         p {
             margin-bottom: 25px;
-            text-align: justify;
+            font-size: 1.1rem;
         }
 
-        .summary-box {
-            background-color: var(--bg-light);
-            border-left: 6px solid var(--primary);
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 4px;
-        }
-
-        .alert-box {
-            background-color: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 30px 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .alert-box::before {
-            content: "⚠️";
-            font-size: 2em;
-            margin-right: 15px;
-        }
-
-        ul.technical-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        ul.technical-list li {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        ul.technical-list li::before {
-            content: "✓";
-            color: var(--primary);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        blockquote {
+        .highlight-box {
+            background-color: #e6fffa;
+            border-left: 4px solid #2c7a7b;
+            padding: 25px;
+            margin: 35px 0;
             font-style: italic;
-            color: #555;
-            border-left: 4px solid var(--accent);
-            margin: 30px 0;
-            padding-left: 20px;
-            font-size: 1.1em;
+            color: #285e61;
         }
 
         a {
-            color: var(--primary);
+            color: #c53030; /* Rojo terracota para destacar el enlace */
             text-decoration: none;
-            border-bottom: 2px solid var(--accent);
-            transition: all 0.2s;
+            font-weight: 700;
+            border-bottom: 2px solid #feb2b2;
+            transition: background 0.2s;
         }
 
         a:hover {
-            background-color: var(--accent);
-            color: #000;
-            text-decoration: none;
+            background-color: #fff5f5;
+            border-bottom-color: #c53030;
         }
 
-        .footer-note {
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 80px;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+        ul {
+            list-style: none;
+            padding: 0;
         }
+
+        li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        li::before {
+            content: "•";
+            color: #c53030;
+            font-weight: bold;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .image-placeholder {
+            background-color: #eee;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Rehabilitación de Fachadas: Guía Técnica 2024</h1>
-        <p>Análisis de patologías, normativas de seguridad y nuevos materiales aislantes</p>
-    </header>
-
-    <article>
-        <div class="summary-box">
-            <strong>Resumen Ejecutivo:</strong> La rehabilitación de una fachada no es una mera cuestión cosmética. Ignorar grietas, humedades o desprendimientos compromete la estabilidad estructural del edificio y dispara la factura energética. Este informe detalla los procedimientos estándar para una intervención duradera.
-        </div>
-
-        <p>Vivimos en un parque inmobiliario que envejece. La mayoría de los edificios construidos entre los años 70 y 90 presentan hoy deficiencias graves en su envolvente térmica y protección exterior. La actuación sobre la fachada es, sin duda, la obra de mantenimiento más crítica a la que se enfrenta cualquier comunidad de propietarios o dueño de un inmueble.</p>
-
-        <h2>1. Patologías Constructivas: Diagnóstico</h2>
+    <div class="blog-container">
         
-        <p>El primer paso para una rehabilitación exitosa es entender qué está fallando. Aplicar pintura sobre un soporte enfermo es tirar el dinero. Las patologías más frecuentes que encontramos en las inspecciones técnicas son:</p>
+        <header>
+            <h1>¿Tu fachada pide auxilio? 5 Señales de que debes pintar ya</h1>
+            <span class="meta">Publicado en Mantenimiento y Decoración Exterior</span>
+        </header>
 
-        <h3>A. Carbonatación del Hormigón</h3>
-        <p>Es el "cáncer" del hormigón armado. Con el tiempo, el CO2 ambiental reduce el pH del hormigón, haciendo que deje de proteger al acero interior. Los hierros se oxidan, aumentan de volumen y revientan el recubrimiento. Se identifica visualmente por manchas de óxido y esquinas de balcones rotas.</p>
+        <article>
+            <p>La fachada es la piel de tu edificio. No solo es lo primero que ven tus visitas o clientes, sino que actúa como el escudo protector contra lluvias, sol y contaminación. A menudo, posponemos su mantenimiento pensando que es "solo estética", pero ignorar ciertas señales puede salir muy caro a largo plazo.</p>
 
-        <h3>B. Microfisuras por Retracción Térmica</h3>
-        <p>Los materiales se dilatan con el calor y se contraen con el frío. Si el revestimiento no es lo suficientemente elástico, acaba agrietándose. Estas microfisuras son la puerta de entrada para el agua de lluvia, que al penetrar y helarse en invierno, expande la grieta (gelifracción).</p>
+            <div class="image-placeholder">[Imagen sugerida: Primer plano de una pared exterior con pintura descascarillada]</div>
 
-        <h3>C. Condensaciones Intersticiales</h3>
-        <p>Ocurren cuando el vapor de agua generado en el interior de la vivienda intenta salir y queda atrapado en las capas del muro, mojando el aislamiento. Esto reduce drásticamente la capacidad térmica del edificio y genera mohos tóxicos.</p>
+            <h2>1. El peligro de las microfisuras</h2>
+            <p>Si te acercas a la pared y ves una red de pequeñas grietas, similares a una tela de araña, tienes un problema de "cuarteo". Aunque parezcan inofensivas, son la autopista perfecta para que la humedad entre en la estructura. Cuando esa humedad se congela en invierno, expande la grieta, convirtiendo un problema estético en uno estructural.</p>
 
-        <div class="alert-box">
-            <strong>Advertencia de Seguridad:</strong> Si observa abombamientos en el revestimiento o trozos de cornisa en el suelo, la intervención debe ser inmediata. La responsabilidad civil por daños a terceros (viandantes) recae totalmente sobre la propiedad.
-        </div>
+            <h2>2. Decoloración y "Tiznado"</h2>
+            <p>Pasa la mano por la pared exterior. ¿Te queda un polvo del color de la pintura en la palma? Eso se llama "tiznado" (chalking). Significa que la resina de la pintura se ha degradado por el sol y ya no protege el muro. Es como si la fachada hubiera perdido su sistema inmunitario.</p>
 
-        <h2>2. Sistemas de Rehabilitación: Opciones Técnicas</h2>
+            <div class="highlight-box">
+                "Una fachada sana no solo es bonita; aumenta el valor de tasación de la propiedad hasta un 15% y mejora la eficiencia energética."
+            </div>
 
-        <p>Una vez diagnosticado el problema, la industria de la construcción ofrece tres grandes familias de soluciones, ordenadas de menor a mayor complejidad y coste:</p>
+            <h2>3. La solución profesional</h2>
+            <p>Renovar el exterior no es un proyecto de fin de semana para hacer uno mismo. Requiere evaluar el soporte, elegir entre pinturas de siloxano, pliolite o acrílicas según el clima, y contar con andamiaje seguro.</p>
+            
+            <p>Si has detectado alguno de estos síntomas en tu edificio, es crucial actuar antes de que aparezcan goteras interiores. Para una evaluación técnica y un acabado duradero, te recomendamos consultar con expertos en <a href="https://pintoresvalencia10.com/fachadas/">rehabilitación de fachadas</a> que puedan garantizar el trabajo por escrito. Un tratamiento profesional a tiempo te ahorrará costosas reparaciones de albañilería en el futuro.</p>
 
-        <h3>Sistema 1: Pintura y Revestimientos Elásticos</h3>
-        <p>Es la opción más común para fachadas que conservan su integridad estructural pero necesitan renovación estética e impermeabilización. No vale cualquier pintura. Se deben prescribir revestimientos acrílicos puros, pliolites (para adherencia en soportes disgregados) o siloxanos (para máxima transpirabilidad).</p>
-        <p>El proceso crítico aquí es el <strong>puente de unión</strong>: la imprimación que asegura que la nueva capa no se pele.</p>
+            <h2>4. Tendencias de Color 2024</h2>
+            <p>Más allá de la protección, pintar es la forma más rápida de modernizar una propiedad. Este año, los tonos tierra suaves y los grises cálidos ("greige") están desplazando al blanco puro, ya que disimulan mejor la suciedad urbana y se integran mejor con el entorno natural.</p>
 
-        <h3>Sistema 2: Enfoscados y Morteros Monocapa</h3>
-        <p>Si el revestimiento antiguo está muy deteriorado, se pica y se aplica un nuevo mortero. Los morteros monocapa modernos vienen hidrofugados y coloreados en masa, ofreciendo un acabado pétreo muy resistente y decorativo.</p>
+            <p>No esperes a que se caiga el revestimiento. Una capa de pintura de alta calidad es la inversión más inteligente para proteger tu patrimonio.</p>
 
-        <h3>Sistema 3: SATE (Sistema de Aislamiento Térmico por el Exterior)</h3>
-        <p>Es la joya de la corona en eficiencia energética. Consiste en pegar placas de material aislante (EPS, lana de roca) directamente sobre la fachada antigua y recubrirlas con un mortero especial. Elimina todos los puentes térmicos y renueva por completo la estética del edificio.</p>
+        </article>
 
-        <h2>3. La Importancia de la Verticalidad y el Acceso</h2>
+    </div>
 
-        <p>Trabajar a 20 o 30 metros de altura requiere una logística de precisión. La elección del medio auxiliar determina el coste y la duración de la obra:</p>
-        
-        <ul class="technical-list">
-            <li><strong>Andamio Tubular:</strong> Ofrece la máxima seguridad y permite trabajar simultáneamente en varios niveles. Es obligatorio para obras que impliquen picado de paramentos o instalación de SATE.</li>
-            <li><strong>Trabajos Verticales (Cuerdas):</strong> Ágiles y económicos para reparaciones puntuales, sellado de grietas o pintura de patios de luces donde no cabe un andamio. Requiere técnicos altamente cualificados.</li>
-            <li><strong>Plataformas Elevadoras:</strong> Ideales para fachadas lineales sin obstáculos en la acera.</li>
-        </ul>
+</body>
+</html>
 
-        <h2>4. Marco Legal y Licencias</h2>
-        
-        <p>No se puede tocar una fachada sin permiso. Dependiendo del ayuntamiento, se requerirá desde una Comunicación Previa (para pintar planta baja) hasta un Proyecto Técnico visado por arquitecto (si se altera la envolvente o se instala andamio en vía pública). Ignorar este paso puede acarrear multas que superan el coste de la propia obra.</p>
-
-        <h2>5. Criterios para Elegir Empresa Aplicadora</h2>
-
-        <p>El sector de la rehabilitación sufre de intrusismo. Para garantizar que la inversión dure 15 o 20 años, se deben exigir ciertos estándares:</p>
-        
-        <blockquote>
